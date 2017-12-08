@@ -1,8 +1,8 @@
 // void leapFingerSingleInfo(FingerLeap fl) {
 void leap_finger_single_info(FingerLeap fl) {
-  if(fl.finger_is()) {
-    for(int i = 0; i < fl.num ; i++) {
-      if(fl.finger_visible()[i]) {
+  if(fl.is()) {
+    for(int i = 0; i < fl.get_num() ; i++) {
+      if(fl.visible()[i]) {
         //display info
         pushMatrix() ;
         
@@ -34,10 +34,10 @@ void leap_finger_single_info(FingerLeap fl) {
 
 // void leapFingerAverageInfo(FingerLeap fl, float speed) {
 void leap_finger_average_info(FingerLeap fl, float speed) {
-  fl.speed = speed ;
+  fl.set_speed(speed) ;
   //average fingers info position
-  if(fl.fingerCheck) {
-    for(int i = 0; i < fl.num ; i++) {  
+  if(fl.is()) {
+    for(int i = 0; i < fl.get_num() ; i++) {  
       pushMatrix() ;
       // println("Average", fl.averageNormPos) ;
       Vec3 pos = Vec3(fl.get_average_pos().x *width, height -fl.get_average_pos().y *height,fl.get_average_pos().z  *(width+height) -((width+height)/2)) ;

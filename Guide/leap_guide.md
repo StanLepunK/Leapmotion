@@ -11,10 +11,17 @@ FingerLeap();
 
 method
 --
-public boolean finger_is();
+public boolean is();
+
 
 public void update();
 
+set
+--
+void set_speed(float value);
+
+get
+--
 public int [] get_ID();
 
 public boolean [] finger_visible();
@@ -30,7 +37,6 @@ public float [] get_roll();
 public float [] get_pitch();
 
 public float [] get_yaw();
-
 
 public Vec3 get_average_pos();
 

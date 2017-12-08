@@ -9,9 +9,9 @@ void setup() {
 void draw() {
   background(0) ;
   //println(finger.activefingers) ;
-   finger.update() ;
-   leap_finger_single_info(finger) ;
-   leap_finger_average_info(finger, 0.05) ;
+  finger.update() ;
+  leap_finger_single_info(finger) ;
+  leap_finger_average_info(finger, 0.05) ;
    
    
    textSize(150) ;

@@ -3,7 +3,7 @@ Leap motion implementation
 * Copyleft (c) 2014-2017 
 * @see http://stanlepunk.xyz/
 2014 – 2017
-v 1.0.0
+v 1.0.1
 */
 import com.leapmotion.leap.*; 
 com.leapmotion.leap.Controller leap;
@@ -129,6 +129,12 @@ class FingerLeap {
       }
     } 
   }
+  /**
+  set
+  */
+  void set_speed(float speed) {
+    this.speed = speed;
+  }
 
   /**
   get
@@ -137,11 +143,11 @@ class FingerLeap {
   public int [] get_ID() {
     return ID;
   }
-  public boolean finger_is() {
+  public boolean is() {
     return fingerCheck ;
   }
 
-  public boolean [] finger_visible() {
+  public boolean [] visible() {
     return fingerVisible;
   }
 
@@ -175,6 +181,10 @@ class FingerLeap {
 
   public Vec3 get_average_dir() {
     return average_dir;
+  }
+
+  public int get_num() {
+    return num ;
   }
 
 
