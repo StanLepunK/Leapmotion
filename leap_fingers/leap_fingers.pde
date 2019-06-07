@@ -1,21 +1,21 @@
-FingerLeap finger ;
+Finger_leap finger ;
 
 void setup() {
   size(800,600, P3D) ;
-  finger = new FingerLeap() ;
+  finger = new Finger_leap() ;
   colorSetup() ;
 }
 
 void draw() {
   background(0) ;
-  //println(finger.activefingers) ;
+  //println(finger.active_fingers) ;
   finger.update() ;
   leap_finger_single_info(finger) ;
   leap_finger_average_info(finger, 0.05) ;
    
    
    textSize(150) ;
-   text(finger.activefingers, width/2, height/2) ;
+   text(finger.active_fingers, width/2, height/2) ;
   
   //PVector verticalRange = new PVector(.2,.5) ; // int the order width, height, depth scale 0 to 1
 }
