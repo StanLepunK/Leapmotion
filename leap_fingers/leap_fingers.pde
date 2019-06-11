@@ -3,33 +3,13 @@ Finger_leap finger ;
 void setup() {
   size(800,600, P3D) ;
   finger = new Finger_leap() ;
-  colorSetup() ;
 }
 
 void draw() {
   background(0) ;
-  //println(finger.active_fingers) ;
   finger.update() ;
   leap_finger_single_info(finger) ;
   leap_finger_average_info(finger, 0.05) ;
-   
-   
-   textSize(150) ;
-   text(finger.active_fingers, width/2, height/2) ;
-  
-  //PVector verticalRange = new PVector(.2,.5) ; // int the order width, height, depth scale 0 to 1
-}
-
-
-
-
-//COLOR
-color rouge, noir, blanc, gris ;
-
-void colorSetup() {
-  colorMode (HSB, 360,100,100) ;
-  blanc = color(0,0,100);
-  rouge = color(10,100,100);
-  noir = color(10,100,0);
-  gris = color(10,50,50);
+  textSize(150) ;
+  text(finger.active_fingers, width/2, height/2) ;
 }
